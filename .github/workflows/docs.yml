@@ -1,0 +1,37 @@
+name: documentation
+
+on:
+  repository_dispatch:
+    types: [ build_docs ]
+
+
+jobs:
+  build_docs:
+    name: 📚 Build documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Checkout showdown repo
+        uses: actions/checkout@v3
+        with:
+          repository: bandantonio/showdown
+          path: repo
+      
+      - name: ➕ Copy website artifacts
+        id: website
+        run: |
+          mkdir -p public/docs
+          cp -R ./website/* ./public
+      
+      - name: 👷 📚 Build documentation
+        id: build_docs
+        run: |
+          docker run --rm -v ${PWD}/repo:/docs squidfunk/mkdocs-material build
+          cp -R ./repo/public/* ./public
+
+      - name: 🚀 Deploy to GitHub Pages 
+        if: steps.build_docs.outcome == 'success'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
