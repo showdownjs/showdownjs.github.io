@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://showdownjs.com/</loc>
+  <lastmod>2017-12-14T20:11:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/documentation</loc>
+  <lastmod>2017-12-11T20:11:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/releases</loc>
+  <lastmod>2017-12-14T20:11:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/blog</loc>
+  <lastmod>2017-12-14T20:11:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/blog/annoucement-showdown-2.0</loc>
+  <lastmod>2017-12-14T12:46:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/blog/rewriting-the-parser-challenges-and-apportunities</loc>
+  <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://showdownjs.com/#!/blog/showdown-1.8.7-released</loc>
+  <lastmod>2018-10-17T00:18:00+00:00</lastmod>
+</url>
+</urlset>
