@@ -1,9 +1,11 @@
 name: documentation
 
 on:
+  push:
+    branches:    
+      - 'main'
   repository_dispatch:
     types: [ build_docs ]
-
 
 jobs:
   build_docs:
@@ -21,14 +23,14 @@ jobs:
       - name: ➕ Copy website artifacts
         id: website
         run: |
-          mkdir -p public/docs
-          cp -R ./website/* ./public
+          rsync -avh ./* ./public --exclude README.md --exclude repo --delete
       
       - name: 👷 📚 Build documentation
         id: build_docs
+        working-directory: ./repo
         run: |
-          docker run --rm -v ${PWD}/repo:/docs squidfunk/mkdocs-material build
-          cp -R ./repo/public/* ./public
+          docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
+          rsync -avh ./public/* ../public --delete
 
       - name: 🚀 Deploy to GitHub Pages 
         if: steps.build_docs.outcome == 'success'
