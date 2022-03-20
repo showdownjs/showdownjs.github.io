@@ -30,7 +30,7 @@ jobs:
         working-directory: ./repo
         run: |
           docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
-          rsync -acvh ./public/ ../public/docs --delete
+          rsync -acvh ./public/ ../public/docs
 
       - name: 🚀 Deploy to GitHub Pages 
         if: steps.build_docs.outcome == 'success'
