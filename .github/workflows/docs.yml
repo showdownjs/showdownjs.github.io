@@ -23,14 +23,14 @@ jobs:
       - name: ➕ Copy website artifacts
         id: website
         run: |
-          rsync -avh ./* ./public --exclude README.md --exclude repo --delete
+          rsync -acvh ./ ./public --exclude README.md --exclude repo --delete
       
       - name: 👷 📚 Build documentation
         id: build_docs
         working-directory: ./repo
         run: |
           docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
-          rsync -avh ./public/* ../public --delete
+          rsync -acvh ./public/ ../public/docs --delete
 
       - name: 🚀 Deploy to GitHub Pages 
         if: steps.build_docs.outcome == 'success'
