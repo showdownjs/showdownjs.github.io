@@ -1,0 +1,1959 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Showdown is a JavaScript Markdown to HTML converter">
+      
+      
+      
+      <link rel="icon" href="http://showdownjs.com/apple-touch-icon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Available options - Showdown documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#backslashescapeshtmltags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Showdown documentation" class="md-header__button md-logo" aria-label="Showdown documentation" data-md-component="logo">
+      
+  <img src="http://showdownjs.com/apple-touch-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Showdown documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Available options
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/showdownjs/showdown" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    showdownjs/showdown
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quickstart/" class="md-tabs__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../configuration/" class="md-tabs__link md-tabs__link--active">
+        Configuration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../cli/" class="md-tabs__link">
+      CLI
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../integrations/" class="md-tabs__link">
+      Integrations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../extensions/" class="md-tabs__link">
+        Extensions
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../tutorials/" class="md-tabs__link">
+      Tutorials
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Showdown documentation" class="md-nav__button md-logo" aria-label="Showdown documentation" data-md-component="logo">
+      
+  <img src="http://showdownjs.com/apple-touch-icon.png" alt="logo">
+
+    </a>
+    Showdown documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/showdownjs/showdown" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    showdownjs/showdown
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donations/" class="md-nav__link">
+        Donations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quickstart" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quickstart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown-syntax/" class="md-nav__link">
+        Showdown's Markdown syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility/" class="md-nav__link">
+        Compatibility
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Showdown options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Available options
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Available options
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backslashescapeshtmltags" class="md-nav__link">
+    backslashEscapesHTMLTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completehtmldocument" class="md-nav__link">
+    completeHTMLDocument
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizedheaderid" class="md-nav__link">
+    customizedHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disableforced4spacesindentedsublists" class="md-nav__link">
+    disableForced4SpacesIndentedSublists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encodeemails" class="md-nav__link">
+    encodeEmails
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excludetrailingpunctuationfromurls" class="md-nav__link">
+    excludeTrailingPunctuationFromURLs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghcodeblocks" class="md-nav__link">
+    ghCodeBlocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghcompatibleheaderid" class="md-nav__link">
+    ghCompatibleHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghmentions" class="md-nav__link">
+    ghMentions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghmentionslink" class="md-nav__link">
+    ghMentionsLink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headerlevelstart" class="md-nav__link">
+    headerLevelStart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literalmidwordunderscores" class="md-nav__link">
+    literalMidWordUnderscores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noheaderid" class="md-nav__link">
+    noHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omitextrawlincodeblocks" class="md-nav__link">
+    omitExtraWLInCodeBlocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlinksinnewwindow" class="md-nav__link">
+    openLinksInNewWindow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parseimgdimensions" class="md-nav__link">
+    parseImgDimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefixheaderid" class="md-nav__link">
+    prefixHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rawheaderid" class="md-nav__link">
+    rawHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rawprefixheaderid" class="md-nav__link">
+    rawPrefixHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirespacebeforeheadingtext" class="md-nav__link">
+    requireSpaceBeforeHeadingText
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplelinebreaks" class="md-nav__link">
+    simpleLineBreaks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifiedautolink" class="md-nav__link">
+    simplifiedAutoLink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smartindentationfix" class="md-nav__link">
+    smartIndentationFix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smoothlivepreview" class="md-nav__link">
+    smoothLivePreview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitadjacentblockquotes" class="md-nav__link">
+    splitAdjacentBlockquotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strikethrough" class="md-nav__link">
+    strikethrough
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablesheaderid" class="md-nav__link">
+    tablesHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasklists" class="md-nav__link">
+    tasklists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#underline" class="md-nav__link">
+    underline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flavors/" class="md-nav__link">
+        Flavors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        Integrations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Extensions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-extension/" class="md-nav__link">
+        Create an extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions-list/" class="md-nav__link">
+        List of known extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backslashescapeshtmltags" class="md-nav__link">
+    backslashEscapesHTMLTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completehtmldocument" class="md-nav__link">
+    completeHTMLDocument
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizedheaderid" class="md-nav__link">
+    customizedHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disableforced4spacesindentedsublists" class="md-nav__link">
+    disableForced4SpacesIndentedSublists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encodeemails" class="md-nav__link">
+    encodeEmails
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excludetrailingpunctuationfromurls" class="md-nav__link">
+    excludeTrailingPunctuationFromURLs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghcodeblocks" class="md-nav__link">
+    ghCodeBlocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghcompatibleheaderid" class="md-nav__link">
+    ghCompatibleHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghmentions" class="md-nav__link">
+    ghMentions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghmentionslink" class="md-nav__link">
+    ghMentionsLink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headerlevelstart" class="md-nav__link">
+    headerLevelStart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literalmidwordunderscores" class="md-nav__link">
+    literalMidWordUnderscores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noheaderid" class="md-nav__link">
+    noHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omitextrawlincodeblocks" class="md-nav__link">
+    omitExtraWLInCodeBlocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlinksinnewwindow" class="md-nav__link">
+    openLinksInNewWindow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parseimgdimensions" class="md-nav__link">
+    parseImgDimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefixheaderid" class="md-nav__link">
+    prefixHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rawheaderid" class="md-nav__link">
+    rawHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rawprefixheaderid" class="md-nav__link">
+    rawPrefixHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirespacebeforeheadingtext" class="md-nav__link">
+    requireSpaceBeforeHeadingText
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplelinebreaks" class="md-nav__link">
+    simpleLineBreaks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifiedautolink" class="md-nav__link">
+    simplifiedAutoLink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smartindentationfix" class="md-nav__link">
+    smartIndentationFix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smoothlivepreview" class="md-nav__link">
+    smoothLivePreview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitadjacentblockquotes" class="md-nav__link">
+    splitAdjacentBlockquotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strikethrough" class="md-nav__link">
+    strikethrough
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablesheaderid" class="md-nav__link">
+    tablesHeaderId
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasklists" class="md-nav__link">
+    tasklists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#underline" class="md-nav__link">
+    underline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/showdownjs/showdown/edit/master/docs/available-options.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>Available options</h1>
+
+<div class="admonition warning">
+<p>Starting from the version <code>1.6.0</code> and earlier, all the options are <code>disabled</code> by default in the cli tool.</p>
+</div>
+<h3 id="backslashescapeshtmltags">backslashEscapesHTMLTags</h3>
+<p>Support escaping of HTML tags.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.7.2</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">input</label><label for="__tabbed_1_2">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>\<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>foo\<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>div<span class="ni">&amp;gt;</span>foo<span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="completehtmldocument">completeHTMLDocument</h3>
+<p>Output a complete HTML document, including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags instead of an HTML fragment.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.8.5</code></li>
+</ul>
+<h3 id="customizedheaderid">customizedHeaderId</h3>
+<p>Set custom ID for a heading.</p>
+<div class="admonition warning">
+<p>This option can be overridden with the <a href="#noheaderid"><code>noHeaderId</code></a> option.</p>
+</div>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.7.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">code</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>## Sample heading {mycustomid}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mycustomid&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition hint">
+<p>For better readability and human-friendliness of the heading IDs, it is also recommended to set the <a href="#ghcompatibleheaderid"><code>ghCompatibleHeaderId</code></a> option to <code>true</code>.</p>
+</div>
+<h3 id="disableforced4spacesindentedsublists">disableForced4SpacesIndentedSublists</h3>
+<p>Disable the rule of 4 spaces to indent sub-lists. If enabled, this option effectively reverts to the old behavior where you can indent sub-lists with 2 or 3 spaces.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.5.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">input</label><label for="__tabbed_3_2">output (value is <code>false</code>)</label><label for="__tabbed_3_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>- one
+  - two
+
+...
+
+- one
+    - two
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>two<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>one
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>two<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>one
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>two<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>one
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>two<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="emoji">emoji</h3>
+<p>Enable emoji support. For more info on available emojis, see https://github.com/showdownjs/showdown/wiki/Emojis (since v.1.8.0)</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.8.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">input</label><label for="__tabbed_4_2">output (value is <code>false</code>)</label><label for="__tabbed_4_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>this is a :smile: emoji
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>this is a :smile: emoji<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>this is a 😄 emoji<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Full list of supported emojies</p>
+<p>Check the <a href="https://github.com/showdownjs/showdown/wiki/Emojis#emoji-list">Showdown Wiki</a> for a full list of supported emojies.    </p>
+</div>
+<h3 id="encodeemails">encodeEmails</h3>
+<p>Enable automatic obfuscation of email addresses. During this process, email addresses are encoded via Character Entities, transforming ASCII email addresses into their equivalent decimal entities.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.6.1</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">input</label><label for="__tabbed_5_2">output (value is <code>false</code>)</label><label for="__tabbed_5_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;myself@example.com&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mailto:myself@example.com&quot;</span><span class="p">&gt;</span>myself@example.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;t&amp;#x6f;&amp;#x3a;&amp;#109;&amp;#x79;s&amp;#x65;&amp;#x6c;&amp;#102;&amp;#64;&amp;#x65;xa&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;c&amp;#x6f;&amp;#109;&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#x6d;&amp;#121;</span>s<span class="ni">&amp;#101;&amp;#108;</span>f<span class="ni">&amp;#x40;&amp;#x65;&amp;#120;</span>a<span class="ni">&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="excludetrailingpunctuationfromurls">excludeTrailingPunctuationFromURLs</h3>
+<p>Exclude trailing punctuation from autolinked URLs: <code>.</code> <code>!</code> <code>?</code> <code>(</code> <code>)</code></p>
+<p>This option applies only to links generated by <a href="#simplifiedautolink"><code>simplifiedAutoLink</code></a>.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.5.1</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">input</label><label for="__tabbed_6_2">output (value is <code>false</code>)</label><label for="__tabbed_6_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>   check this link www.google.com.
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>check this link <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;www.google.com&quot;</span><span class="p">&gt;</span>www.google.com.<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>check this link <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;www.google.com&quot;</span><span class="p">&gt;</span>www.google.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="ghcodeblocks">ghCodeBlocks</h3>
+<p>Enable support for GFM code block style syntax (fenced codeblocks).</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>true</code></li>
+<li>introduced in: <code>0.3.1</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> ```
+ some code here
+ ```
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="ghcompatibleheaderid">ghCompatibleHeaderId</h3>
+<p>Generate heading IDs compatible with GitHub style: spaces are replaced with dashes, and certain non-alphanumeric chars are removed.</p>
+<div class="admonition warning">
+<p>This option can be overridden with the <a href="#noheaderid"><code>noHeaderId</code></a> option.</p>
+</div>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.5.5</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">input</label><label for="__tabbed_8_2">output (value is <code>false</code>)</label><label for="__tabbed_8_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code># This is a heading with @#$%
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;thisisaheading&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;this-is-a-heading-with-&quot;</span><span class="p">&gt;</span>This is a heading with @#$%<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="ghmentions">ghMentions</h3>
+<p>Enables support for GitHub <code>@mentions</code> that allows you to link to the GitHub profile page of the mentioned username.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.6.0</code> </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">input</label><label for="__tabbed_9_2">output (value is <code>false</code>)</label><label for="__tabbed_9_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>hello there @tivie
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hello there @tivie<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hello there <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.github.com/tivie&quot;</span><span class="p">&gt;</span>@tivie<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="ghmentionslink">ghMentionsLink</h3>
+<p>Specify where the link generated by <code>@mentions</code> should point to. Works only when <a href="#ghmentions"><code>ghMentions: true</code></a>.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>https://github.com/{u}</code></li>
+<li>introduced in: <code>1.6.2</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">input</label><label for="__tabbed_10_2">output (value is <code>https://github.com/{u}</code>)</label><label for="__tabbed_10_3">output (value is <code>http://mysite.com/{u}/profile</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>hello there @tivie
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hello there <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.github.com/tivie&quot;</span><span class="p">&gt;</span>@tivie<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hello there <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;//mysite.com/tivie/profile&quot;</span><span class="p">&gt;</span>@tivie<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="headerlevelstart">headerLevelStart</h3>
+<p>Set starting level for the heading tags.</p>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default value: <code>1</code></li>
+<li>introduced in: <code>1.1.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">input</label><label for="__tabbed_11_2">output (value is <code>1</code>)</label><label for="__tabbed_11_3">output (value is <code>3</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code># This is a heading
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="literalmidwordunderscores">literalMidWordUnderscores</h3>
+<p>Treat underscores in the middle of words as literal characters.</p>
+<p>Underscores allow you to specify the words that should be emphasized. However, in some cases, this may be unwanted behavior. With this option enabled, underscores in the middle of words will no longer be interpreted as <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code>, but as literal underscores.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">input</label><label for="__tabbed_12_2">output (value is <code>false</code>)</label><label for="__tabbed_12_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>some text with__underscores__in the middle
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>some text with<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>underscores<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>in the middle<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>some text with__underscores__in the middle<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="metadata">metadata</h3>
+<p>Enable support for document metadata (front-matter). You can define metadata at the top of a document between <code>««« »»»</code> or <code>--- ---</code> symbols.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.8.5</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">input</label><label for="__tabbed_13_2">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">ref</span> <span class="o">=</span> <span class="sb">`referenced value`</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">markdown</span> <span class="o">=</span> <span class="sb">`</span>
+<span class="sb">---</span>
+<span class="sb">first: Lorem</span>
+<span class="sb">second: Ipsum</span>
+<span class="sb">ref_variable: </span><span class="si">${</span><span class="nx">ref</span><span class="si">}</span><span class="sb"></span>
+<span class="sb">---</span>
+<span class="sb">`</span>
+
+<span class="kd">var</span> <span class="nx">conv</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">({</span><span class="nx">metadata</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">conv</span><span class="p">.</span><span class="nx">makeHtml</span><span class="p">(</span><span class="nx">markdown</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="nx">conv</span><span class="p">.</span><span class="nx">getMetadata</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// console.log(metadata)</span>
+<span class="p">{</span>
+    <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;Lorem&#39;</span><span class="p">,</span>
+    <span class="nx">second</span><span class="o">:</span> <span class="s1">&#39;Ipsum&#39;</span><span class="p">,</span>
+    <span class="nx">ref_variable</span><span class="o">:</span> <span class="s1">&#39;referenced value&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="noheaderid">noHeaderId</h3>
+<p>Disable automatic generation of heading IDs.</p>
+<div class="admonition warning">
+<p>Setting the option to <code>true</code> overrides the following options:</p>
+<ul>
+<li><a href="#prefixheaderid"><code>prefixHeaderId</code></a></li>
+<li><a href="#customizedheaderid"><code>customizedHeaderId</code></a></li>
+<li><a href="#ghcompatibleheaderid"><code>ghCompatibleHeaderId</code></a></li>
+</ul>
+</div>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.1.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">input</label><label for="__tabbed_14_2">output (value is <code>false</code>)</label><label for="__tabbed_14_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code># This is a heading
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;thisisaheading&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="omitextrawlincodeblocks">omitExtraWLInCodeBlocks</h3>
+<p>Omit trailing newline in code blocks (which is set by default before the closing tag). This option affects both indented and fenced (gfm style) code blocks.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.0.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">input</label><label for="__tabbed_15_2">output (value is <code>false</code>)</label><label for="__tabbed_15_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>    var foo = &#39;bar&#39;;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>var foo = &#39;bar&#39;;
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>var foo = &#39;bar&#39;;<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="openlinksinnewwindow">openLinksInNewWindow</h3>
+<p>Open links in new windows.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.7.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">input</label><label for="__tabbed_16_2">output (value is <code>false</code>)</label><label for="__tabbed_16_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[link](https://google.com)
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://google.com&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://google.com&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="parseimgdimensions">parseImgDimensions</h3>
+<p>Set image dimensions from within Markdown syntax.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.1.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>![foo](foo.jpg =100x80)   set width to 100px and height to 80px
+![bar](bar.jpg =100x*)    set width to 100px and height to &quot;auto&quot;
+![baz](baz.jpg =80%x5em)  set width to 80% and height to 5em
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="prefixheaderid">prefixHeaderId</h3>
+<p>Add a prefix to the generated heading ID:</p>
+<ul>
+<li>Passing a string will add that string to the heading ID.</li>
+<li>Passing <code>true</code> will add a generic <code>section</code> prefix.</li>
+</ul>
+<div class="admonition warning">
+<p>This option can be overridden with the <a href="#noheaderid"><code>noHeaderId</code></a> option.</p>
+</div>
+<ul>
+<li>type: <code>string / boolean</code></li>
+<li>default value: <code>false</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:4"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><input id="__tabbed_18_4" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">input</label><label for="__tabbed_18_2">output (value is <code>false</code>)</label><label for="__tabbed_18_3">output (value is <code>true</code>)</label><label for="__tabbed_18_4">output (value is <code>showdown</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code># This is a heading
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;thisisaheading&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;sectionthisisaheading&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;showdownthisisaheading&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="rawheaderid">rawHeaderId</h3>
+<p>Replace <code></code> (space), <code>'</code> (single quote), and <code>"</code> (double quote) with <code>-</code> (dash) in the generated heading IDs, including prefixes.</p>
+<div class="admonition danger">
+<p><strong>Use with caution</strong> as it might result in malformed IDs.</p>
+</div>
+<ul>
+<li>type:</li>
+<li>default value:</li>
+<li>introduced in: <code>1.7.3</code></li>
+</ul>
+<h3 id="rawprefixheaderid">rawPrefixHeaderId</h3>
+<p>Prevent Showndown from modifying the prefix. Works only when <a href="#prefixheaderid"><code>prefixHeaderId</code></a> is set to a string value.</p>
+<div class="admonition danger">
+<p><strong>Use with caution</strong> as it might result in malformed IDs. For example, when the prefix contains special characters like <code>"</code> <code>\</code> <code>/</code> or others.</p>
+</div>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.7.3</code></li>
+</ul>
+<h3 id="requirespacebeforeheadingtext">requireSpaceBeforeHeadingText</h3>
+<p>Require a space between a heading <code>#</code> and the heading text.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.5.3</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">input</label><label for="__tabbed_19_2">output (value is <code>false</code>)</label><label for="__tabbed_19_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>#heading
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;heading&quot;</span><span class="p">&gt;</span>heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>#heading<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="simplelinebreaks">simpleLineBreaks</h3>
+<p>Parse line breaks as <code>&lt;br/&gt;</code> in paragraphs (GitHub-style behavior).</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.5.1</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:3"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">input</label><label for="__tabbed_20_2">output (value is <code>false</code>)</label><label for="__tabbed_20_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>a line
+wrapped in two
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>a line
+wrapped in two<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>a line<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+wrapped in two<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="simplifiedautolink">simplifiedAutoLink</h3>
+<p>Enable automatic linking for plain text URLs.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:3"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">input</label><label for="__tabbed_21_2">output (value is <code>false</code>)</label><label for="__tabbed_21_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Lorem ipsum www.google.com
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum www.google.com<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;www.google.com&quot;</span><span class="p">&gt;</span>www.google.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="smartindentationfix">smartIndentationFix</h3>
+<p>Resolve indentation problems related to ES6 template strings in the midst of indented code.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.4.2</code></li>
+</ul>
+<h3 id="smoothlivepreview">smoothLivePreview</h3>
+<p>Resolve an awkward effect when a paragraph is followed by a list. This effect appears on some circumstances, in live preview editors.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.1</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">awkward effect</p>
+<p><img alt="" src="http://i.imgur.com/YQ9iHTL.gif​" /></p>
+</div>
+<h3 id="splitadjacentblockquotes">splitAdjacentBlockquotes</h3>
+<p>Split adjacent blockquote blocks.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.8.6</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:3"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><input id="__tabbed_22_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">input</label><label for="__tabbed_22_2">output (value is <code>false</code>)</label><label for="__tabbed_22_3">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&gt; Quote #1
+&gt;&gt; Sub-quote 1
+
+&gt; Quote #2
+&gt;&gt; Sub-quote 2
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Quote #1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sub-quote 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Quote #2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sub-quote 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Quote #1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sub-quote 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Quote #2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sub-quote 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>    
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="strikethrough">strikethrough</h3>
+<p>Enable support for strikethrough (<code>&lt;del&gt;</code>).</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">input</label><label for="__tabbed_23_2">output (value is <code>true</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>~~strikethrough~~
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>strikethrough<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="tables">tables</h3>
+<p>Enable support for tables syntax.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>| h1    |    h2   |      h3 |
+|:------|:-------:|--------:|
+| 100   | [a][1]  | ![b][2] |
+| *foo* | **bar** | ~~baz~~ |
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="tablesheaderid">tablesHeaderId</h3>
+<p>Generate automatic IDs for table headings. Works only when <a href="#tables"><code>tables: true</code></a>.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<h3 id="tasklists">tasklists</h3>
+<p>Enable support for GitHub style tasklists.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>introduced in: <code>1.2.0</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> - [x] This task is done
+ - [ ] This task is still pending
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="underline">underline</h3>
+<p>Enable support for underline. If enabled, underscores will no longer be parsed as <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code>.</p>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default value: <code>false</code></li>
+<li>status: <code>Experimental</code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>__underlined word__     // double underscores
+
+___underlined word___   // triple underscores
+</code></pre></div>
+</div>
+</div>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Showdown options" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Showdown options
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../flavors/" class="md-footer__link md-footer__link--next" aria-label="Next: Flavors" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Flavors
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>

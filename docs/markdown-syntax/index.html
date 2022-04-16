@@ -1,0 +1,1831 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Showdown is a JavaScript Markdown to HTML converter">
+      
+      
+      
+      <link rel="icon" href="http://showdownjs.com/apple-touch-icon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Showdown's Markdown syntax - Showdown documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Showdown documentation" class="md-header__button md-logo" aria-label="Showdown documentation" data-md-component="logo">
+      
+  <img src="http://showdownjs.com/apple-touch-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Showdown documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Showdown's Markdown syntax
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/showdownjs/showdown" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    showdownjs/showdown
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quickstart/" class="md-tabs__link md-tabs__link--active">
+        Quickstart
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../configuration/" class="md-tabs__link">
+        Configuration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../cli/" class="md-tabs__link">
+      CLI
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../integrations/" class="md-tabs__link">
+      Integrations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../extensions/" class="md-tabs__link">
+        Extensions
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../tutorials/" class="md-tabs__link">
+      Tutorials
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Showdown documentation" class="md-nav__button md-logo" aria-label="Showdown documentation" data-md-component="logo">
+      
+  <img src="http://showdownjs.com/apple-touch-icon.png" alt="logo">
+
+    </a>
+    Showdown documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/showdownjs/showdown" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    showdownjs/showdown
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donations/" class="md-nav__link">
+        Donations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quickstart" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quickstart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Showdown's Markdown syntax
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Showdown's Markdown syntax
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" class="md-nav__link">
+    Headings
+  </a>
+  
+    <nav class="md-nav" aria-label="Headings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atx-style" class="md-nav__link">
+    Atx Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setext-style" class="md-nav__link">
+    Setext style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-ids" class="md-nav__link">
+    Header IDs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold-and-italic" class="md-nav__link">
+    Bold and Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strikethrough" class="md-nav__link">
+    Strikethrough
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emojis" class="md-nav__link">
+    Emojis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    Code formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Code formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-formats" class="md-nav__link">
+    Inline formats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-lines" class="md-nav__link">
+    Multiple lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unordered-lists" class="md-nav__link">
+    Unordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordered-lists" class="md-nav__link">
+    Ordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasklists-gfm-style" class="md-nav__link">
+    TaskLists (GFM Style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-syntax" class="md-nav__link">
+    List syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-blocks" class="md-nav__link">
+    Nested blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-lists" class="md-nav__link">
+    Nested lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-code-blocks" class="md-nav__link">
+    Nested code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-style" class="md-nav__link">
+    Reference Style
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline_1" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-style_1" class="md-nav__link">
+    Reference Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-dimensions" class="md-nav__link">
+    Image dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64-encoded-images" class="md-nav__link">
+    Base64 encoded images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mentions" class="md-nav__link">
+    Mentions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handle-html-in-markdown-documents" class="md-nav__link">
+    Handle HTML in markdown documents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-entities" class="md-nav__link">
+    Escape entities
+  </a>
+  
+    <nav class="md-nav" aria-label="Escape entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escape-markdown-entities" class="md-nav__link">
+    Escape markdown entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-html-tags" class="md-nav__link">
+    Escape HTML tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-differences-and-gotchas" class="md-nav__link">
+    Known differences and gotchas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility/" class="md-nav__link">
+        Compatibility
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Showdown options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-options/" class="md-nav__link">
+        Available options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flavors/" class="md-nav__link">
+        Flavors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        Integrations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Extensions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Extensions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-extension/" class="md-nav__link">
+        Create an extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions-list/" class="md-nav__link">
+        List of known extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" class="md-nav__link">
+    Headings
+  </a>
+  
+    <nav class="md-nav" aria-label="Headings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atx-style" class="md-nav__link">
+    Atx Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setext-style" class="md-nav__link">
+    Setext style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-ids" class="md-nav__link">
+    Header IDs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold-and-italic" class="md-nav__link">
+    Bold and Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strikethrough" class="md-nav__link">
+    Strikethrough
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emojis" class="md-nav__link">
+    Emojis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    Code formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Code formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-formats" class="md-nav__link">
+    Inline formats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-lines" class="md-nav__link">
+    Multiple lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unordered-lists" class="md-nav__link">
+    Unordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordered-lists" class="md-nav__link">
+    Ordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasklists-gfm-style" class="md-nav__link">
+    TaskLists (GFM Style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-syntax" class="md-nav__link">
+    List syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-blocks" class="md-nav__link">
+    Nested blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-lists" class="md-nav__link">
+    Nested lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-code-blocks" class="md-nav__link">
+    Nested code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-style" class="md-nav__link">
+    Reference Style
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline_1" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-style_1" class="md-nav__link">
+    Reference Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-dimensions" class="md-nav__link">
+    Image dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64-encoded-images" class="md-nav__link">
+    Base64 encoded images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mentions" class="md-nav__link">
+    Mentions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handle-html-in-markdown-documents" class="md-nav__link">
+    Handle HTML in markdown documents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-entities" class="md-nav__link">
+    Escape entities
+  </a>
+  
+    <nav class="md-nav" aria-label="Escape entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escape-markdown-entities" class="md-nav__link">
+    Escape markdown entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-html-tags" class="md-nav__link">
+    Escape HTML tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-differences-and-gotchas" class="md-nav__link">
+    Known differences and gotchas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/showdownjs/showdown/edit/master/docs/markdown-syntax.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>Showdown's Markdown syntax</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Showdown was created by John Fraser as a direct port of the original parser written by Markdown's creator, John Gruber.</p>
+<p>Although Showdown has evolved since its inception, in "vanilla mode", it tries to follow the <a href="http://daringfireball.net/projects/markdown/">original markdown spec</a> (henceforth referred as vanilla) as much as possible. There are, however, a few important differences, mainly due to inconsistencies in the original spec, which Showdown addressed following the author's advice as stated in the <a href="https://pairlist6.pair.net/mailman/listinfo/markdown-discuss">markdown's "official" newsletter</a>.</p>
+<p>Showdown also supports opt-in features, that is, an "extra" syntax that is not defined in the original spec. Users can enable these features via options (All the new syntax elements are disabled by default).</p>
+<p>This document provides a quick reference of the supported syntax and the differences in output from the original markdown.pl implementation.</p>
+<h2 id="paragraphs">Paragraphs</h2>
+<p>Paragraphs in Showdown are <strong>one or more lines of consecutive text</strong> followed by one or more blank lines.</p>
+<div class="highlight"><pre><span></span><code>On July 2, an alien mothership entered Earth&#39;s orbit and deployed several dozen 
+saucer-shaped &quot;destroyer&quot; spacecraft, each 15 miles (24 km) wide.
+
+On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, 
+participated in an assault on a destroyer near the city of Los Angeles.
+</code></pre></div>
+<p>The implication of the "one or more consecutive lines of text" is that Showdown supports 
+"hard-wrapped" text paragraphs. It means the following examples produce the same output:</p>
+<div class="highlight"><pre><span></span><code>A very long line of text
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>A very
+long line
+of text
+</code></pre></div>
+<p>If you <strong>do</strong> want to add soft line breaks (which translate to <code>&lt;br&gt;</code> in HTML) to a paragraph, 
+you can do so by adding 3 space characters to the end of the line.</p>
+<p>You can also force every line break in paragraphs to translate to <code>&lt;br&gt;</code> (as Github does) by
+enabling the option <a href="../available-options/#simplelinebreaks"><strong><code>simpleLineBreaks</code></strong></a>.</p>
+<h2 id="headings">Headings</h2>
+<h3 id="atx-style">Atx Style</h3>
+<p>You can create a heading by adding one or more <code>#</code> symbols before your heading text. The number of <code>#</code> determines the level of the heading. This is similar to <a href="http://www.aaronsw.com/2002/atx/intro"><strong>atx style</strong></a>.</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># The 1st level heading (an &lt;h1&gt; tag)</span>
+<span class="gu">## The 2nd level heading (an &lt;h2&gt; tag)</span>
+…
+<span class="gu">###### The 6th level heading (an &lt;h6&gt; tag)</span>
+</code></pre></div>
+<p>The space between <code>#</code> and the heading text is not required but you can make it mandatory by enabling the option <a href="../available-options/#requirespacebeforeheadingtext"><strong><code>requireSpaceBeforeHeadingText</code></strong></a>.</p>
+<p>You can wrap the headings in <code>#</code>. Both leading and trailing <code>#</code> will be removed.</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## My Heading ##</span>
+</code></pre></div>
+<p>If, for some reason, you need to keep a leading or trailing <code>#</code>, you can either add a space or escape it:</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># # My header # #</span>
+
+<span class="gh">#\# My Header \# #</span>
+</code></pre></div>
+<h3 id="setext-style">Setext style</h3>
+<p>You can also use <a href="https://en.wikipedia.org/wiki/Setext"><strong>setext style</strong></a> headings, although only two levels are available.</p>
+<div class="highlight"><pre><span></span><code><span class="gh">This is an H1</span>
+<span class="gh">=============</span>
+
+<span class="gu">This is an H2</span>
+<span class="gu">-------------</span>
+</code></pre></div>
+<div class="admonition warning">
+<p>There is an awkward effect when a paragraph is followed by a list. This effect appears on some circumstances, in live preview editors.</p>
+<p><img alt="awkward effect" src="http://i.imgur.com/YQ9iHTL.gif" /></p>
+<p>You can prevent this by enabling the option <a href="../available-options/#smoothlivepreview"><strong><code>smoothPreview</code></strong></a>.</p>
+</div>
+<h3 id="header-ids">Header IDs</h3>
+<p>Showdown automatically generates bookmark anchors in titles by adding an id property to a heading.</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># My cool header with ID</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mycoolheaderwithid&quot;</span><span class="p">&gt;</span>My cool header with ID<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>This behavior can be modified with options:</p>
+<ul>
+<li><a href="../available-options/#noheaderid"><strong><code>noHeaderId</code></strong></a> disables automatic id generation; </li>
+<li><a href="../available-options/#ghcompatibleheaderid"><strong><code>ghCompatibleHeaderId</code></strong></a> generates header ids compatible with github style (spaces are replaced with dashes and a bunch of non alphanumeric chars are removed)</li>
+<li><a href="../available-options/#prefixheaderid"><strong><code>prefixHeaderId</code></strong></a> adds a prefix to the generated header ids (either automatic or custom).</li>
+<li><a href="../available-options/#headerlevelstart"><strong><code>headerLevelStart</code></strong></a> sets the header starting level. For instance, setting this to 3 means that <code># header</code> will be converted to <code>&lt;h3&gt;</code>.</li>
+</ul>
+<p>Read the <a href="https://github.com/showdownjs/showdown/blob/master/README.md">README.md</a> for more info</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>You can indicate blockquotes with a <code>&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code>In the words of Abraham Lincoln:
+
+<span class="k">&gt; </span><span class="ge">Pardon my french</span>
+</code></pre></div>
+<p>Blockquotes can have multiple paragraphs and can have other block elements inside.</p>
+<div class="highlight"><pre><span></span><code><span class="k">&gt; </span><span class="ge">A paragraph of text</span>
+<span class="k">&gt;</span>
+<span class="ge">&gt; Another paragraph</span>
+<span class="k">&gt;</span>
+<span class="ge">&gt; - A list</span>
+<span class="k">&gt; </span><span class="ge">- with items</span>
+</code></pre></div>
+<h2 id="bold-and-italic">Bold and Italic</h2>
+<p>You can make text bold or italic.</p>
+<div class="highlight"><pre><span></span><code><span class="ge">*This text will be italic*</span>
+<span class="gs">**This text will be bold**</span>
+</code></pre></div>
+<p>Both bold and italic can use either a <code>*</code> or an <code>_</code> around the text for styling. This allows you to combine both bold and italic if needed.</p>
+<div class="highlight"><pre><span></span><code><span class="gs">**Everyone _must_ attend the meeting at 5 o&#39;clock today.**</span>
+</code></pre></div>
+<h2 id="strikethrough">Strikethrough</h2>
+<p>With the option [<strong><code>strikethrough</code></strong>][] enabled, Showdown supports strikethrough elements.
+The syntax is the same as GFM, that is, by adding two tilde (<code>~~</code>) characters around
+a word or groups of words.</p>
+<div class="highlight"><pre><span></span><code>a <span class="gd">~~strikethrough~~</span> element
+</code></pre></div>
+<p>a <s>strikethrough</s> element</p>
+<h2 id="emojis">Emojis</h2>
+<p>Since version 1.8.0, Showdown supports Github's emojis. A complete list of available emojis can be found <a href="https://github.com/showdownjs/showdown/wiki/emojis">here</a>.</p>
+<div class="highlight"><pre><span></span><code>this is a :smile: smile emoji
+</code></pre></div>
+<p>this is a <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> smile emoji</p>
+<h2 id="code-formatting">Code formatting</h2>
+<h3 id="inline-formats">Inline formats</h3>
+<p>Use single backticks (`) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.</p>
+<div class="highlight"><pre><span></span><code>Here&#39;s an idea: why don&#39;t we take <span class="sb">`SuperiorProject`</span> and turn it into <span class="sb">`**Reasonable**Project`</span>.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Here&#39;s an idea: why don&#39;t we take <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>SuperiorProject<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> and turn it into <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>**Reasonable**Project<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="multiple-lines">Multiple lines</h3>
+<p>To create blocks of code you should indent it by four spaces.</p>
+<div class="highlight"><pre><span></span><code>    this is a piece
+    of
+    code
+</code></pre></div>
+<p>If the option <a href="../available-options/#ghcodeblocks"><strong><code>ghCodeBlocks</code></strong></a> is activated (which is by default), you can use triple backticks <code>```</code> to format text as its own distinct block.</p>
+<pre><code>Check out this neat program I wrote:
+
+```
+x = 0
+x = 2 + 2
+what is x
+```
+</code></pre>
+<h2 id="lists">Lists</h2>
+<p>Showdown supports unordered (bulleted) and ordered (numbered) lists.</p>
+<h3 id="unordered-lists">Unordered lists</h3>
+<p>You can make an unordered list by preceding list items with either <code>*</code>, <code>-</code>, or <code>+</code>. Markers are interchangeable too.</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Item
++ Item
+<span class="k">-</span> Item
+</code></pre></div>
+<h3 id="ordered-lists">Ordered lists</h3>
+<p>You can make an ordered list by preceding list items with a number.</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Item 1
+<span class="k">2.</span> Item 2
+<span class="k">3.</span> Item 3
+</code></pre></div>
+<div class="admonition earning">
+<p>The actual numbers you use to mark the list have no effect on the HTML output that Showdown produces. So you can use the same number in all items if you wish to. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Item 1
+<span class="k">1.</span> Item 2
+<span class="k">1.</span> Item 3
+
+<span class="k">2.</span> Item 1
+<span class="k">2.</span> Item 2
+<span class="k">2.</span> Item 3
+</code></pre></div>
+</div>
+<h3 id="tasklists-gfm-style">TaskLists (GFM Style)</h3>
+<p>Showdown supports GFM-styled takslists if the <a href="../available-options/#tasklists"><strong><code>tasklists</code></strong></a> option is enabled.</p>
+<div class="highlight"><pre><span></span><code> <span class="k">- [x]</span> checked list item
+ <span class="k">- [ ]</span> unchecked list item
+</code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> checked list item</li>
+<li class="task-list-item"><input type="checkbox" disabled/> unchecked list item</li>
+</ul>
+<h3 id="list-syntax">List syntax</h3>
+<p>List markers typically start at the left margin, but may be indented by up to three spaces. </p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> valid list item
+   <span class="k">*</span> this is valid too
+   <span class="k">*</span> this is too  
+</code></pre></div>
+<p>List markers must be followed by one or more spaces or a tab.</p>
+<p>To make lists look nicer, you can wrap items with hanging indents:</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span>   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+<span class="k">*</span>   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre></div>
+<p>But if you want to be lazy, you don't have to <img alt="😁" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f601.svg" title=":grin:" /></p>
+<p>If one list item is separated by a blank line, Showdown will wrap all the list items in <code>&lt;p&gt;</code> tags in the HTML output.
+So this input:</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Bird
+
+<span class="k">*</span> Magic
+<span class="k">*</span> Johnson
+</code></pre></div>
+<p>results in:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Bird<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Magic<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Johnson<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>This differs from other Markdown implementations such as GFM (GitHub) or CommonMark.  </p>
+<h3 id="nested-blocks">Nested blocks</h3>
+<p>List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span>  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+<span class="k">2.</span>  Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre></div>
+<p>This is valid for other block elements such as blockquotes:</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span>   A list item with a blockquote:
+
+<span class="k">    &gt; </span><span class="ge">This is a blockquote</span>
+<span class="k">    &gt; </span><span class="ge">inside a list item.</span>
+</code></pre></div>
+<p>or even other lists.</p>
+<h3 id="nested-lists">Nested lists</h3>
+<p>You can create nested lists by indenting list items by <strong>four</strong> spaces.</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span>  Item 1
+    <span class="k">1.</span> A corollary to the above item.
+    <span class="k">2.</span> Yet another point to consider.
+<span class="k">2.</span>  Item 2
+    <span class="k">*</span> A corollary that does not need to be ordered.
+    <span class="k">*</span> This is indented four spaces
+    <span class="k">*</span> You might want to consider making a new list.
+<span class="k">3.</span>  Item 3
+</code></pre></div>
+<p>This behavior is consistent with the original spec but differs from other implementations such as GFM or CommonMark. Prior to version 1.5, you just needed to indent two spaces for it to be considered a sublist.</p>
+<p>You can disable the <strong>four spaces requirement</strong> with option <a href="../available-options/#disableforced4spacesindentedsublists"><strong><code>disableForced4SpacesIndentedSublists</code></strong></a></p>
+<p>To nest a third (or more) sublist level, you need to indent 4 extra spaces (or 1 extra tab) for each level:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span>  level 1
+    <span class="k">1.</span>  Level 2
+        <span class="k">*</span>   Level 3
+    <span class="k">2.</span>  level 2
+        <span class="k">1.</span>  Level 3
+<span class="k">1.</span>  Level 1
+</code></pre></div>
+<h3 id="nested-code-blocks">Nested code blocks</h3>
+<p>You can nest fenced codeblocks the same way you nest other block elements, by indenting by four spaces or a tab:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span>  Some code:
+
+<span class="sb">    ```js</span>
+    <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
+<span class="sb">    ```</span>
+</code></pre></div>
+<p>To put an <em>indented style</em> code block within a list item, the code block needs to be indented twice — 8 spaces or two tabs:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span>  Some code:
+
+        var foo = &#39;bar&#39;;
+        console.log(foo);
+</code></pre></div>
+<h2 id="links">Links</h2>
+<h3 id="simple">Simple</h3>
+<p>If you wrap a valid URL or email in <code>&lt;&gt;</code> it will be turned into a link whose text is the link itself.</p>
+<div class="highlight"><pre><span></span><code>link to &lt;http://www.google.com/&gt;
+
+this is my email &lt;somedude@mail.com&gt;
+</code></pre></div>
+<p>In the case of email addresses, Showdown also performs a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots.
+You can disable this obfuscation by setting <a href="../available-options/#encodeemails"><strong><code>encodeEmails</code></strong></a> option to <code>false</code>.</p>
+<p>With the option <a href="../available-options/#simplifiedautolink"><strong><code>simplifiedAutoLink</code></strong></a> enabled, Showdown will automagically turn every valid URL it finds in the text body into links without the need to wrap them in <code>&lt;&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code>link to http://www.google.com/
+
+this is my email somedude@mail.com
+</code></pre></div>
+<h3 id="inline">Inline</h3>
+<p>You can create an inline link by wrapping link text in brackets <code>[ ]</code>, and then wrapping the link in parentheses <code>( )</code>.</p>
+<p>For example, a hyperlink to <code>github.com/showdownjs/showdown</code>, with a link text that says, <code>Get Showdown!</code> will look as follows:</p>
+<div class="highlight"><pre><span></span><code>[Get Showdown!](https://github.com/showdownjs/showdown)
+</code></pre></div>
+<h3 id="reference-style">Reference Style</h3>
+<p>You can also use the reference style, like this:</p>
+<div class="highlight"><pre><span></span><code>this is a [<span class="nt">link to google</span>][<span class="nl">1</span>]
+
+[<span class="nl">1</span>]: <span class="na">www.google.com</span>
+</code></pre></div>
+<p>Showdown also supports implicit link references:</p>
+<div class="highlight"><pre><span></span><code>this is a link to [<span class="nt">google</span>][]
+
+[<span class="nl">google</span>]: <span class="na">www.google.com</span>
+</code></pre></div>
+<h2 id="images">Images</h2>
+<p>In Markdown, the syntax for images is similar to that of links, supporting both inline and reference styles as well. The only difference in syntax for images is the leading exclamation mark before brackets: <code>![]</code>.</p>
+<h3 id="inline_1">Inline</h3>
+<p>Inline image syntax looks like this:</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Alt text</span>](<span class="na">url/to/image</span>)
+
+![<span class="nt">Alt text</span>](<span class="na">url/to/image &quot;Optional title&quot;</span>)
+</code></pre></div>
+<p>That is:</p>
+<ul>
+<li>An exclamation mark: <code>!</code></li>
+<li>followed by a set of square brackets <code>[ ]</code> containing the alt attribute text for the image</li>
+<li>followed by a set of parentheses <code>( )</code> containing the URL or path to the image and an optional title attribute enclosed in double or single quotes.</li>
+</ul>
+<h3 id="reference-style_1">Reference Style</h3>
+<p>Reference-style image syntax looks like this:</p>
+<div class="highlight"><pre><span></span><code>![Alt text][id]
+</code></pre></div>
+<p>Where <code>id</code> is the name of a defined image reference. Image references are defined using syntax identical to link references:</p>
+<div class="highlight"><pre><span></span><code>[<span class="nl">id</span>]: <span class="na">url/to/image  &quot;Optional title attribute&quot;</span>
+</code></pre></div>
+<p>Implicit references are also supported:</p>
+<div class="highlight"><pre><span></span><code>![showdown logo][]
+
+[<span class="nl">showdown logo</span>]: <span class="na">http://showdownjs.github.io/demo/img/editor.logo.white.png</span>
+</code></pre></div>
+<h3 id="image-dimensions">Image dimensions</h3>
+<p>When the option <a href="../available-options/#parseimgdimensions"><strong><code>parseImgDimensions</code></strong></a> is activated, you can define the image dimensions, like this:</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Alt text</span>](<span class="na">url/to/image =250x250 &quot;Optional title&quot;</span>)
+</code></pre></div>
+<p>or in reference style:</p>
+<div class="highlight"><pre><span></span><code>![Alt text][id]
+
+[<span class="nl">id</span>]: <span class="na">url/to/image =250x250</span>
+</code></pre></div>
+<h3 id="base64-encoded-images">Base64 encoded images</h3>
+<p>Showdown supports Base64 encoded images, both reference and inline style.</p>
+<p><strong>Since version 1.7.4</strong>, Showdown supports wrapping of base64 strings, which are usually extremely long lines of text.
+You can add newlines arbitrarily, as long as they are added after the <code>,</code> character.</p>
+<p>inline style</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Alt text</span>](<span class="na">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l</span>
+<span class="na">jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAY</span>
+<span class="na">SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=</span>)
+</code></pre></div>
+<p>reference style</p>
+<div class="highlight"><pre><span></span><code>![Alt text][id]
+
+[<span class="nl">id</span>]:
+<span class="na">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l</span>
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+</code></pre></div>
+<div class="admonition warning">
+<p>With reference-style base64 image sources, regardless of "wrapping", a double newline is <strong>required</strong> after the base64 string to separate them from a paragraph or other text block (but references can be adjacent):</p>
+<div class="admonition example">
+<p class="admonition-title">Wrapped reference style</p>
+<div class="highlight"><pre><span></span><code>![Alt text][id]
+![Alt text][id2]
+
+[<span class="nl">id</span>]:
+<span class="na">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l</span>
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+[<span class="nl">id2</span>]:
+<span class="na">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l</span>
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+
+
+this text needs to be separated from the references by 2 newlines
+</code></pre></div>
+</div>
+</div>
+<h2 id="tables">Tables</h2>
+<p>Tables aren't part of the core Markdown spec, but they are part of GFM. You can enable them in Showdown via the option <a href="../available-options/#tables"><strong><code>tables</code></strong></a>.</p>
+<ul>
+<li>Colons can be used to align columns.</li>
+<li>The outer pipes (<code>|</code>) are optional, matching GFM spec. </li>
+<li>You don't need to make the raw Markdown line up prettily.</li>
+<li>You can use other Markdown syntax inside them.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| <span class="gs">**col 3 is**</span>  | right-aligned | $1600 |
+| col 2 is      | <span class="ge">*centered*</span>    |   $12 |
+| zebra stripes | <span class="gd">~~are neat~~</span>  |    $1 |
+</code></pre></div>
+<h2 id="mentions">Mentions</h2>
+<p>Showdown supports GitHub mentions by enabling the option <a href="../available-options/#ghmentions"><strong><code>ghMentions</code></strong></a>. This will turn every <code>@username</code> into a link to their github profile.</p>
+<div class="highlight"><pre><span></span><code>hey <span class="ni">@tivie</span>, check this out
+</code></pre></div>
+<p>Since version 1.6.2, you can customize the generated link in mentions with the option <a href="../available-options/#ghmentionslink"><strong><code>ghMentionsLink</code></strong></a>.</p>
+<p>For example, setting this option to <code>http://mysite.com/{u}/profile</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hey <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://mysite.com/tivie/profile&quot;</span><span class="p">&gt;</span>@tivie<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>, check this out<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="handle-html-in-markdown-documents">Handle HTML in markdown documents</h2>
+<p>Showdown, in most cases, leaves HTML tags untouched in the output document:</p>
+<div class="highlight"><pre><span></span><code>some markdown <span class="gs">**here**</span>
+&lt;div&gt;this is <span class="ge">*not*</span> <span class="gs">**parsed**</span>&lt;/div&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>some markdown <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>here<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>this is *not* **parsed**<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>However, the content of <code>&lt;code&gt;</code> and <code>&lt;pre&gt;&lt;code&gt;</code> tags is always escaped.</p>
+<div class="highlight"><pre><span></span><code>some markdown <span class="gs">**here**</span> with &lt;code&gt;foo &amp; bar &lt;baz&gt;&lt;/baz&gt;&lt;/code&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>some markdown <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>here<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> with <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>foo <span class="ni">&amp;amp;</span> bar <span class="ni">&amp;lt;</span>baz<span class="ni">&amp;gt;&amp;lt;</span>/baz<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>If you want to enable markdown parsing inside a specific HTML tag, you can use the html attribute <strong><code>markdown</code></strong>, <strong><code>markdown="1"</code></strong>, or <strong><code>data-markdown="1"</code></strong>.</p>
+<div class="highlight"><pre><span></span><code>some markdown <span class="gs">**here**</span>
+&lt;div markdown=&quot;1&quot;&gt;this is <span class="ge">*not*</span> <span class="gs">**parsed**</span>&lt;/div&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>some markdown <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>here<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">markdown</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>this is <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>not<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>parsed<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="escape-entities">Escape entities</h2>
+<h3 id="escape-markdown-entities">Escape markdown entities</h3>
+<p>Showdown allows you to use backslash (<code>\</code>) to escape characters that have special meaning in markdown's syntax and generate literal characters instead. For example, if you want to surround a word with literal underscores (instead of an HTML <code>&lt;em&gt;</code> tag), you can use backslashes before the underscores, like this:</p>
+<div class="highlight"><pre><span></span><code>\_literal underscores\_
+</code></pre></div>
+<p>Showdown provides backslash escapes for the following characters:</p>
+<div class="highlight"><pre><span></span><code>\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+</code></pre></div>
+<h3 id="escape-html-tags">Escape HTML tags</h3>
+<p>Since <a href="https://github.com/showdownjs/showdown/tree/1.7.2">version 1.7.2</a>, backslash escaping of HTML tags is supported when <a href="../available-options/#backslashescapeshtmltags"><strong><code>backslashEscapesHTMLTags</code></strong></a> option is enabled.</p>
+<div class="highlight"><pre><span></span><code>\&lt;div&gt;a literal div\&lt;/div&gt;
+</code></pre></div>
+<h2 id="known-differences-and-gotchas">Known differences and gotchas</h2>
+<p>In most cases, Showdown's output is identical to that of Perl Markdown v1.0.2b7. What follows is a list of all known deviations. Please file an issue if you find more.</p>
+<ul>
+<li>
+<p><strong>Since version 1.4.0, Showdown supports the markdown="1" attribute</strong>, but for older versions, this attribute is ignored. This means:</p>
+<div class="highlight"><pre><span></span><code>&lt;div markdown=&quot;1&quot;&gt;
+      Markdown does <span class="ge">*not*</span> work in here.
+&lt;/div&gt;
+</code></pre></div>
+</li>
+<li>
+<p>You can only nest square brackets in link titles to a depth of two levels:</p>
+<pre><code>[[fine]](http://www.github.com/)
+[[[broken]]](http://www.github.com/)
+</code></pre>
+<p>If you need more, you can escape them with backslashes.</p>
+</li>
+<li>
+<p>A list is <strong>single paragraph</strong> if it has only <strong>1 line break separating items</strong> and it becomes <strong>multi-paragraph if ANY of its items is separated by 2 line breaks</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">-</span> foo
+
+<span class="k">-</span> bar
+<span class="k">-</span> baz
+</code></pre></div>
+<p>becomes</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>foo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>bar<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>baz<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+</ul>
+<p>This new ruleset is based on the comments of Markdown's author John Gruber in the <a href="https://pairlist6.pair.net/mailman/listinfo/markdown-discuss">Markdown discussion list</a>.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../quickstart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quickstart" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Quickstart
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../compatibility/" class="md-footer__link md-footer__link--next" aria-label="Next: Compatibility" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Compatibility
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>
