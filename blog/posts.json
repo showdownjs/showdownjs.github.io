@@ -68,5 +68,19 @@
       "image": "blog/img/2018.10.16.jpg",
       "summary": "We are very happy to announce the release of version 1.9.0, with a new and exciting feature: the HTML to Markdown converter!"
     }
+  },
+  {
+    "id": 5,
+    "canonical": "showdown-2.1.0-released",
+    "url": "blog/showdown-2.1.0-released.md",
+    "metadata": {
+      "title": "Showdown 2.1.0 Released",
+      "author": "Estevão Soares dos Santos",
+      "author_avatar": "img/avatars/tivie.jpg",
+      "date": "2022-04-21",
+      "language": "en",
+      "image": "blog/img/2018.10.16.jpg",
+      "summary": "We are very happy to announce the release of version 2.1.0 which fixes some bugs and security issues!"
+    }
   }
 ]
