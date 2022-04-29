@@ -345,12 +345,10 @@ h3[id$="breaking-changes"] {
     line-height: 2em;
 }
 
-
 /** highlightjs override **/
 .hljs {
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #313440;
 }
 .hljs .hljs-ln-code{
     padding-left: 1.5em;

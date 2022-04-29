@@ -7,7 +7,8 @@ var converter = new showdown.Converter({
 });
 
 /** ROUTING **/
-var router = new Navigo('http://showdownjs.com/', true, '#!');
+var router = new Navigo('/', true, '#!');
+//var router = new Navigo('/');
 /** BLOG POSTS **/
 var blogPosts = {};
 
@@ -90,7 +91,7 @@ $(document).ready(function() {
           $('#blog-post-container').html(article);
 
           $('pre code').each(function(i, block) {
-            hljs.highlightBlock(block);
+            hljs.highlightElement(block);
             hljs.lineNumbersBlock(block);
           });
           router.updatePageLinks();
@@ -98,7 +99,7 @@ $(document).ready(function() {
       }
       
       $page.find('pre>code').each(function(i, block) {
-        hljs.highlightBlock(block);
+        hljs.highlightElement(block);
         hljs.lineNumbersBlock(block);
         router.updatePageLinks();
       });
