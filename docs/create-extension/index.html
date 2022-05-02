@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="http://showdownjs.com/apple-touch-icon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -885,17 +885,17 @@
   <h1>Create an extension</h1>
 
 <p>A Showdown extension is a function that returns an array of language or outputs extensions (henceforth called "sub-extensions"). </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">myext</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">myext1</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span>
-    <span class="nx">regex</span><span class="o">:</span> <span class="sr">/markdown/g</span><span class="p">,</span>
-    <span class="nx">replace</span><span class="o">:</span> <span class="s1">&#39;showdown&#39;</span>
-  <span class="p">};</span>
-  <span class="kd">var</span> <span class="nx">myext2</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="cm">/* extension code */</span>
-  <span class="p">};</span>
-  <span class="k">return</span> <span class="p">[</span><span class="nx">myext1</span><span class="p">,</span> <span class="nx">myext2</span><span class="p">];</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">myext1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lang&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/markdown/g</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">replace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;showdown&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">myext2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* extension code */</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="nx">myext1</span><span class="p">,</span><span class="w"> </span><span class="nx">myext2</span><span class="p">];</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Each sub-extension (<code>myext1</code> and <code>myext2</code> in the example above) should be an object that defines the behavior of the corresponding sub-extension.</p>
 <h2 id="sub-extension-object-properties">Sub-extension object properties</h2>
@@ -935,11 +935,11 @@
 <div class="admonition example">
 <p class="admonition-title">Regex and replace example</p>
 <p>In this example, all the occurrences of <code>markdown</code> will be replaced with <code>showndown</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">myext</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span>
-  <span class="nx">regex</span><span class="o">:</span> <span class="sr">/markdown/g</span><span class="p">,</span>
-  <span class="nx">replace</span><span class="o">:</span> <span class="s1">&#39;showdown&#39;</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lang&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/markdown/g</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">replace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;showdown&#39;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </div>
 <h3 id="filter">Filter</h3>
@@ -955,13 +955,13 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Filter example</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">myext</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span>
-  <span class="nx">filter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">converter</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// ... do stuff to text ...</span>
-    <span class="k">return</span> <span class="nx">text</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lang&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">converter</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ... do stuff to text ...</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">text</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
@@ -969,22 +969,22 @@
 <p>Although Filter extensions are more powerful, they have a few pitfalls that you should keep in mind before using them, especially regarding the <code>converter</code> parameter.</p>
 <p>Since the <code>converter</code> parameter passed to the filter function is the fully initialized instance, any change made to it will be propagated outside the scope of the filter function and will remain there until a new converter instance is created. So, <strong>it is not recommended to make ANY change to the converter object</strong>.</p>
 <p>Another aspect is that if you call the <code>converter</code> recursively, it will call your extension itself at some point. It may lead to infinite recursion in some circumstances, and it's up to you to prevent this. A simple solution is to place a kind of safeguard to disable your extension if it's called more than x times:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">myext</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span>
-  <span class="nx">filter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">converter</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
-      <span class="o">++</span><span class="nx">x</span><span class="p">;</span>
-      <span class="nx">someSubText</span> <span class="o">=</span> <span class="nx">converter</span><span class="p">.</span><span class="nx">makeHtml</span><span class="p">(</span><span class="nx">someSubText</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span> 
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lang&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">converter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="o">++</span><span class="nx">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">someSubText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">converter</span><span class="p">.</span><span class="nx">makeHtml</span><span class="p">(</span><span class="nx">someSubText</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </div>
 <h2 id="register-an-extension">Register an extension</h2>
 <p>To let Showdown know what extensions are available, you need to register them in the Showdown global object.</p>
 <p>To register an extension, call the <code>showdown.extension</code> function with two parameters: the first one is the extension name; the second one is the actual extension.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">showdown</span><span class="p">.</span><span class="nx">extension</span><span class="p">(</span><span class="s1">&#39;myext&#39;</span><span class="p">,</span> <span class="nx">myext</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">showdown</span><span class="p">.</span><span class="nx">extension</span><span class="p">(</span><span class="s1">&#39;myext&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">myext</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <h2 id="test-an-extension">Test an extension</h2>
 <p>The Showdown test runner is configured to automatically test cases for extensions.</p>
@@ -1010,27 +1010,27 @@
 </div>
 <h3 id="implementation-concerns">Implementation concerns</h3>
 <p>One of the concerns is maintaining both client-side and server-side compatibility. You can do this with a few lines of boilerplate code.:</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">extension</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">showdown</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// global (browser or node.js global)</span>
-    <span class="nx">extension</span><span class="p">(</span><span class="nx">showdown</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">define</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// AMD</span>
-    <span class="nx">define</span><span class="p">([</span><span class="s1">&#39;showdown&#39;</span><span class="p">],</span> <span class="nx">extension</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">exports</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Node, CommonJS-like</span>
-    <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">extension</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;showdown&#39;</span><span class="p">));</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// showdown was not found so an error is thrown</span>
-    <span class="k">throw</span> <span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Could not find showdown library&#39;</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">showdown</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// loading extension into showdown</span>
-  <span class="nx">showdown</span><span class="p">.</span><span class="nx">extension</span><span class="p">(</span><span class="s1">&#39;myext&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">myext</span> <span class="o">=</span> <span class="p">{</span> <span class="cm">/* ... actual extension code ... */</span> <span class="p">};</span>
-    <span class="k">return</span> <span class="p">[</span><span class="nx">myext</span><span class="p">];</span>
-  <span class="p">});</span>
-<span class="p">}));</span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">extension</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">showdown</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// global (browser or node.js global)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">extension</span><span class="p">(</span><span class="nx">showdown</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;function&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// AMD</span><span class="w"></span>
+<span class="w">    </span><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;showdown&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">extension</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">exports</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Node, CommonJS-like</span><span class="w"></span>
+<span class="w">    </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">extension</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;showdown&#39;</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// showdown was not found so an error is thrown</span><span class="w"></span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Could not find showdown library&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">showdown</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// loading extension into showdown</span><span class="w"></span>
+<span class="w">  </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">extension</span><span class="p">(</span><span class="s1">&#39;myext&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... actual extension code ... */</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="nx">myext</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="p">}));</span><span class="w"></span>
 </code></pre></div>
 <p>In the code above, the extension definition is wrapped in a self-executing function to prevent pollution of the global scope. It has another benefit of creating several scope layers that can be useful for interaction between sub-extensions global-wise or local-wise.</p>
 <p>It is also loaded conditionally to make it compatible with different loading mechanisms (such as browser, CommonJS, or AMD).</p>
@@ -1102,7 +1102,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
     
   </body>

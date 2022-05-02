@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="http://showdownjs.com/apple-touch-icon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -832,19 +832,19 @@
 <h2 id="set-option">Set option</h2>
 <h3 id="globally">Globally</h3>
 <p>Setting an option globally affects all Showdown instances.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">showdown</span><span class="p">.</span><span class="nx">setOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">showdown</span><span class="p">.</span><span class="nx">setOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <h3 id="locally">Locally</h3>
 <p>Setting an option locally affects the specified Converter object only. You can set local options via:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Constructor</label><label for="__tabbed_1_2">setOption() method</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">converter</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">({</span><span class="nx">optionKey</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">({</span><span class="nx">optionKey</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="p">});</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">converter</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">();</span>
-<span class="nx">converter</span><span class="p">.</span><span class="nx">setOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">();</span><span class="w"></span>
+<span class="nx">converter</span><span class="p">.</span><span class="nx">setOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -854,26 +854,26 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">getOption()</label><label for="__tabbed_2_2">getOptions()</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1">// Global</span>
-<span class="kd">var</span> <span class="nx">myOption</span> <span class="o">=</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">getOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Global</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myOption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">getOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">//Local</span>
-<span class="kd">var</span> <span class="nx">myOption</span> <span class="o">=</span> <span class="nx">converter</span><span class="p">.</span><span class="nx">getOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">);</span>
+<span class="c1">//Local</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myOption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">converter</span><span class="p">.</span><span class="nx">getOption</span><span class="p">(</span><span class="s1">&#39;optionKey&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1">// Global</span>
-<span class="kd">var</span> <span class="nx">showdownGlobalOptions</span> <span class="o">=</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Global</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">showdownGlobalOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">();</span><span class="w"></span>
 
-<span class="c1">//Local</span>
-<span class="kd">var</span> <span class="nx">thisConverterSpecificOptions</span> <span class="o">=</span> <span class="nx">converter</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">();</span>
+<span class="c1">//Local</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">thisConverterSpecificOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">converter</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h3 id="get-default-options">Get default options</h3>
 <p>You can get Showdown's default options with:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">defaultOptions</span> <span class="o">=</span> <span class="nx">showdown</span><span class="p">.</span><span class="nx">getDefaultOptions</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">defaultOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">getDefaultOptions</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 
               
@@ -943,7 +943,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
     
   </body>
