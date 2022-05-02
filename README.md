@@ -1,3 +1,3 @@
 # showdownjs.github.io
 
-Showdown website and documentation
+[Showdown website](https://showdownjs.com/) and [documentation](https://showdownjs.com/docs/)
