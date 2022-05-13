@@ -7,7 +7,7 @@ var converter = new showdown.Converter({
 });
 
 /** ROUTING **/
-var router = new Navigo('/', true);
+var router = new Navigo('/');
 //var router = new Navigo('/');
 /** BLOG POSTS **/
 var blogPosts = {};
