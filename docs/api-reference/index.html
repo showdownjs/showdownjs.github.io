@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../api-reference/">
+        <link rel="prev" href="../spec-compliance/">
       
       
-        <link rel="next" href="../integrations/">
+        <link rel="next" href="../cli/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>CLI - Showdown documentation</title>
+        <title>API reference - Showdown documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CLI
+              API reference
             
           </span>
         </div>
@@ -224,10 +224,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../configuration/" class="md-tabs__link">
           
   
@@ -244,11 +246,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../cli/" class="md-tabs__link">
         
   
   
@@ -771,24 +771,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -806,7 +811,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -933,41 +938,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../api-reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API reference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -977,6 +947,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -985,7 +957,7 @@
   <span class="md-ellipsis">
     
   
-    CLI
+    API reference
   
 
     
@@ -1003,7 +975,7 @@
   <span class="md-ellipsis">
     
   
-    CLI
+    API reference
   
 
     
@@ -1019,6 +991,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1027,68 +1001,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#converter-instance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requirements
+        Converter instance
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick start guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="Converter instance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#makehtml" class="md-nav__link">
+  <a href="#convertermakehtmltext" class="md-nav__link">
     <span class="md-ellipsis">
       
-        makehtml
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="makehtml">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-i-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        -i / --input
+        converter.makeHtml(text)
       
     </span>
   </a>
@@ -1096,10 +1024,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-o-output" class="md-nav__link">
+  <a href="#convertermakemarkdownhtml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -o/--output
+        converter.makeMarkdown(html)
       
     </span>
   </a>
@@ -1107,10 +1035,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-a-append" class="md-nav__link">
+  <a href="#convertersetoptionkey-value" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -a/--append
+        converter.setOption(key, value)
       
     </span>
   </a>
@@ -1118,10 +1046,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-u-encoding" class="md-nav__link">
+  <a href="#convertergetoptionkey" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -u/--encoding
+        converter.getOption(key)
       
     </span>
   </a>
@@ -1129,10 +1057,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-y-output-encoding" class="md-nav__link">
+  <a href="#convertergetoptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -y/--output-encoding
+        converter.getOptions()
       
     </span>
   </a>
@@ -1140,10 +1068,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-e-extensions" class="md-nav__link">
+  <a href="#convertersetflavorname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -e/--extensions
+        converter.setFlavor(name)
       
     </span>
   </a>
@@ -1151,10 +1079,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-p-flavor" class="md-nav__link">
+  <a href="#convertergetflavor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -p/--flavor
+        converter.getFlavor()
       
     </span>
   </a>
@@ -1162,76 +1090,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-c-config" class="md-nav__link">
+  <a href="#converteraddextensionextension-name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -c/--config
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#makemarkdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        makemarkdown
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="makemarkdown">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-verbosity-and-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output verbosity and color
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Output verbosity and color">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-q-quiet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        -q/--quiet
+        converter.addExtension(extension, [name])
       
     </span>
   </a>
@@ -1239,10 +1101,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-m-mute" class="md-nav__link">
+  <a href="#converteruseextensionextensionname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -m/--mute
+        converter.useExtension(extensionName)
       
     </span>
   </a>
@@ -1250,10 +1112,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-v-verbose" class="md-nav__link">
+  <a href="#converterlistenname-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -v/--verbose
+        converter.listen(name, callback)
       
     </span>
   </a>
@@ -1261,10 +1123,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-color-no-color" class="md-nav__link">
+  <a href="#converterunlistenname-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        --color / --no-color
+        converter.unlisten(name, [callback])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converterdispatchevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.dispatch(event)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertergetmetadataraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.getMetadata([raw])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertergetmetadataformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.getMetadataFormat()
       
     </span>
   </a>
@@ -1277,13 +1172,195 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-options" class="md-nav__link">
+  <a href="#static-showdown-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extra options
+        Static showdown API
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Static showdown API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#showdownsetoptionkey-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.setOption(key, value)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetoptionkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getOption(key)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getOptions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownresetoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.resetOptions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownsetflavorname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.setFlavor(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavor()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavors()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavoroptionsname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavorOptions(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetdefaultoptionssimple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getDefaultOptions([simple])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownextensionname-ext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.extension(name, [ext])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetallextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getAllExtensions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownremoveextensionname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.removeExtension(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownresetextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.resetExtensions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownvalidateextensionext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.validateExtension(ext)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownsubparsername-func" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.subParser(name, [func])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetsubparserlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getSubParserList()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1291,6 +1368,41 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1561,6 +1673,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1569,68 +1683,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#converter-instance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requirements
+        Converter instance
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick start guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="Converter instance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#makehtml" class="md-nav__link">
+  <a href="#convertermakehtmltext" class="md-nav__link">
     <span class="md-ellipsis">
       
-        makehtml
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="makehtml">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-i-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        -i / --input
+        converter.makeHtml(text)
       
     </span>
   </a>
@@ -1638,10 +1706,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-o-output" class="md-nav__link">
+  <a href="#convertermakemarkdownhtml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -o/--output
+        converter.makeMarkdown(html)
       
     </span>
   </a>
@@ -1649,10 +1717,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-a-append" class="md-nav__link">
+  <a href="#convertersetoptionkey-value" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -a/--append
+        converter.setOption(key, value)
       
     </span>
   </a>
@@ -1660,10 +1728,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-u-encoding" class="md-nav__link">
+  <a href="#convertergetoptionkey" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -u/--encoding
+        converter.getOption(key)
       
     </span>
   </a>
@@ -1671,10 +1739,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-y-output-encoding" class="md-nav__link">
+  <a href="#convertergetoptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -y/--output-encoding
+        converter.getOptions()
       
     </span>
   </a>
@@ -1682,10 +1750,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-e-extensions" class="md-nav__link">
+  <a href="#convertersetflavorname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -e/--extensions
+        converter.setFlavor(name)
       
     </span>
   </a>
@@ -1693,10 +1761,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-p-flavor" class="md-nav__link">
+  <a href="#convertergetflavor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -p/--flavor
+        converter.getFlavor()
       
     </span>
   </a>
@@ -1704,76 +1772,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-c-config" class="md-nav__link">
+  <a href="#converteraddextensionextension-name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -c/--config
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#makemarkdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        makemarkdown
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="makemarkdown">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-verbosity-and-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output verbosity and color
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Output verbosity and color">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-q-quiet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        -q/--quiet
+        converter.addExtension(extension, [name])
       
     </span>
   </a>
@@ -1781,10 +1783,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-m-mute" class="md-nav__link">
+  <a href="#converteruseextensionextensionname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -m/--mute
+        converter.useExtension(extensionName)
       
     </span>
   </a>
@@ -1792,10 +1794,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-v-verbose" class="md-nav__link">
+  <a href="#converterlistenname-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        -v/--verbose
+        converter.listen(name, callback)
       
     </span>
   </a>
@@ -1803,10 +1805,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-color-no-color" class="md-nav__link">
+  <a href="#converterunlistenname-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        --color / --no-color
+        converter.unlisten(name, [callback])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converterdispatchevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.dispatch(event)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertergetmetadataraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.getMetadata([raw])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertergetmetadataformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        converter.getMetadataFormat()
       
     </span>
   </a>
@@ -1819,13 +1854,195 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-options" class="md-nav__link">
+  <a href="#static-showdown-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extra options
+        Static showdown API
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Static showdown API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#showdownsetoptionkey-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.setOption(key, value)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetoptionkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getOption(key)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getOptions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownresetoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.resetOptions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownsetflavorname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.setFlavor(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavor()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavors()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetflavoroptionsname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getFlavorOptions(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetdefaultoptionssimple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getDefaultOptions([simple])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownextensionname-ext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.extension(name, [ext])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetallextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getAllExtensions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownremoveextensionname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.removeExtension(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownresetextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.resetExtensions()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownvalidateextensionext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.validateExtension(ext)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdownsubparsername-func" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.subParser(name, [func])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showdowngetsubparserlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        showdown.getSubParserList()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1849,327 +2066,91 @@
   
 
 
-  <h1>CLI</h1>
-
-<p>Showdown comes bundled with a Command-line interface (CLI) tool that allows you to run Showdown converter from the command line.</p>
-<h2 id="requirements">Requirements</h2>
+<h1 id="api-reference">API reference</h1>
+<p>This page lists the public API of Showdown. It is split into:</p>
 <ul>
-<li><a href="https://nodejs.org/en/">Node.js</a></li>
+<li>the <a href="#converter-instance"><strong><code>showdown.Converter</code></strong> instance API</a> — methods you call on a converter you created with <code>new showdown.Converter()</code>;</li>
+<li>the <a href="#static-showdown-api"><strong>static <code>showdown</code></strong> API</a> — methods on the global <code>showdown</code> object that affect defaults, flavors, extensions and the sub-parser registry.</li>
 </ul>
-<h2 id="quick-start-guide">Quick start guide</h2>
-<ol>
-<li>
-<p>Check that Showdown CLI is accessible.</p>
-<ul>
-<li>
-<p>If you installed Showdown globally via <code>npm install showdown -g</code>, you can access the CLI tool help by typing <code>showdown -h</code> in the command line:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">input</label><label for="__tabbed_1_2">output</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>-h
+<div class="admonition hint">
+<p>Several methods are covered in depth on dedicated pages. Where that is the case, this page gives the signature and a one-line summary and links out:
+<a href="../configuration/">Options</a> · <a href="../available-options/">Available options</a> · <a href="../flavors/">Flavors</a> · <a href="../extensions/">Extensions</a> · <a href="../event-system/">Event system</a>.</p>
+</div>
+<h2 id="converter-instance">Converter instance</h2>
+<p>Create a converter, then call these on the instance:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">(</span><span class="cm">/* optional options object */</span><span class="p">);</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Usage: showdown &lt;command&gt; [options]
-
-CLI to Showdownjs markdown parser v3.0.0-alpha
-
-Options:
-  -V, --version       output the version number
-  -q, --quiet         Quiet mode. Only print errors
-  -m, --mute          Mute mode. Does not print anything
-  -v, --verbose       Verbose mode. Print extra information about the conversion
-  --color             Force colored output even when the output is not a terminal
-  --no-color          Disable colored output
-  -h, --help          display help for command
-
-Commands:
-  makehtml [options]      Converts markdown into html
-  makemarkdown [options]  Converts html into markdown
-  help [command]          display help for command
+<h3 id="convertermakehtmltext"><code>converter.makeHtml(text)</code></h3>
+<p>Convert a Markdown string into HTML. Returns the generated HTML <code>string</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">converter</span><span class="p">.</span><span class="nx">makeHtml</span><span class="p">(</span><span class="s1">&#39;# hello&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &#39;&lt;h1 id=&quot;hello&quot;&gt;hello&lt;/h1&gt;&#39;</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>If you installed Showdown locally via <code>npm install showdown</code>, open the folder where Showdown is installed, and type <code>node ./bin/showdown.js -h</code> in the command line:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">input</label><label for="__tabbed_2_2">output</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>node<span class="w"> </span>./bin/showdown.js<span class="w"> </span>-h
+<h3 id="convertermakemarkdownhtml"><code>converter.makeMarkdown(html)</code></h3>
+<p>Convert an HTML string back into Markdown (the reverse direction). Returns the generated Markdown <code>string</code>. See <a href="../html-to-markdown/">HTML to Markdown</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">converter</span><span class="p">.</span><span class="nx">makeMarkdown</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;hello&lt;/h1&gt;&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &#39;# hello&#39;</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Usage: showdown &lt;command&gt; [options]
-
-CLI to Showdownjs markdown parser v3.0.0-alpha
-
-Options:
-  -V, --version       output the version number
-  -q, --quiet         Quiet mode. Only print errors
-  -m, --mute          Mute mode. Does not print anything
-  -v, --verbose       Verbose mode. Print extra information about the conversion
-  --color             Force colored output even when the output is not a terminal
-  --no-color          Disable colored output
-  -h, --help          display help for command
-
-Commands:
-  makehtml [options]      Converts markdown into html
-  makemarkdown [options]  Converts html into markdown
-  help [command]          display help for command
+<h3 id="convertersetoptionkey-value"><code>converter.setOption(key, value)</code></h3>
+<p>Set a single option on <strong>this</strong> converter. See <a href="../configuration/">Configuration</a> and the <a href="../available-options/">list of options</a>.</p>
+<h3 id="convertergetoptionkey"><code>converter.getOption(key)</code></h3>
+<p>Return the value of a single option on this converter.</p>
+<h3 id="convertergetoptions"><code>converter.getOptions()</code></h3>
+<p>Return the full options object for this converter.</p>
+<h3 id="convertersetflavorname"><code>converter.setFlavor(name)</code></h3>
+<p>Apply a <a href="../flavors/">flavor</a> preset (<code>'gfm'</code>, <code>'original'</code>, <code>'commonmark'</code>, <code>'vanilla'</code>) to this converter. Throws if the flavor is unknown. <code>'github'</code> is accepted as a backwards-compatible alias for <code>'gfm'</code>.</p>
+<h3 id="convertergetflavor"><code>converter.getFlavor()</code></h3>
+<p>Return the name of the flavor currently set on this converter.</p>
+<h3 id="converteraddextensionextension-name"><code>converter.addExtension(extension, [name])</code></h3>
+<p>Add an <a href="../extensions/">extension</a> (object, function or array) to this converter. See <a href="../create-extension/">Create an extension</a>.</p>
+<h3 id="converteruseextensionextensionname"><code>converter.useExtension(extensionName)</code></h3>
+<p>Add a previously <a href="./#showdownextensionname-ext">registered</a> extension to this converter, by name.</p>
+<h3 id="converterlistenname-callback"><code>converter.listen(name, callback)</code></h3>
+<p>Attach a listener <code>callback</code> to a single <a href="../event-system/#event-types">event</a> on this converter. The callback receives a <a href="../event-system/#event-object"><code>showdown.Event</code></a> and must return it. This is the one-off equivalent of a <a href="../create-extension/#listener-extensions"><code>listener</code> extension</a>. Returns the converter (chainable).</p>
+<p>Because <code>lang</code> and <code>output</code> extensions are themselves <a href="../create-extension/#type">registered as listeners</a> (on <code>makehtml.onPreParse</code> and <code>makehtml.onEnd</code> respectively), this is the underlying mechanism behind every extension that modifies conversion.</p>
+<h3 id="converterunlistenname-callback"><code>converter.unlisten(name, [callback])</code></h3>
+<p>Detach a listener previously added with <a href="#converterlistenname-callback"><code>listen()</code></a> (or by an extension) from an <a href="../event-system/#event-types">event</a> on this converter. Pass the same <code>callback</code> reference to remove that specific listener; omit <code>callback</code> to remove <strong>every</strong> listener for <code>name</code>. Unknown event names are a no-op. Returns the converter (chainable).</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addClass</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="kd">class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;h&#39;</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">event</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nx">converter</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="s1">&#39;makehtml.heading.atx.onCapture&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">addClass</span><span class="p">);</span>
+<span class="nx">converter</span><span class="p">.</span><span class="nx">unlisten</span><span class="p">(</span><span class="s1">&#39;makehtml.heading.atx.onCapture&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">addClass</span><span class="p">);</span><span class="w"> </span><span class="c1">// detach</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</li>
-<li>
-<p>Use <code>makehtml</code> command to convert your document to HTML. For example:</p>
-<div class="admonition example">
-<p class="admonition-title">Convert <code>foo.md</code> into <code>bar.html</code></p>
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html
-</code></pre></div>
-</div>
-</li>
-</ol>
-<h2 id="commands">Commands</h2>
-<h3 id="makehtml"><code>makehtml</code></h3>
-<p>Convert a Markdown input into HTML.</p>
-<p><strong>Usage</strong></p>
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div>
-<h4 id="options">Options</h4>
-<h6 id="-i-input"><code>-i / --input</code></h6>
-<ul>
-<li>Short format: <code>-i</code></li>
-<li>Alias: <code>--input</code></li>
-<li>Description: Input source. One or more <code>.md</code> files (or glob patterns). If omitted or empty, reads from <code>stdin</code>.</li>
-<li>Notes:<ul>
-<li>Multiple inputs can be passed at once: <code>-i a.md b.md c.md</code>.</li>
-<li>Glob patterns (<code>*</code>, <code>?</code>) are supported. Your shell normally expands them; on Windows (or
-  when the pattern is quoted) Showdown expands a single-level pattern itself, e.g. <code>-i "*.md"</code>.</li>
-</ul>
-</li>
-<li>
-<p>Examples:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>//<span class="w"> </span>Read<span class="w"> </span>from<span class="w"> </span>stdin<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>stdout
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i
-
-//<span class="w"> </span>Read<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>foo.md<span class="w"> </span>file<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>stdout
-showdown<span class="w"> </span>makehtml<span class="w"> </span>--input<span class="w"> </span>foo.md
-
-//<span class="w"> </span>Convert<span class="w"> </span>several<span class="w"> </span>files<span class="w"> </span>at<span class="w"> </span>once
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>a.md<span class="w"> </span>b.md<span class="w"> </span>-o<span class="w"> </span>out/
-
-//<span class="w"> </span>Convert<span class="w"> </span>every<span class="w"> </span>markdown<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>*.md<span class="w"> </span>-o<span class="w"> </span>out/
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-o-output"><code>-o/--output</code></h6>
-<ul>
-<li>Short format: <code>-o</code></li>
-<li>Alias: <code>--output</code></li>
-<li>Description: Output target. Usually a <code>.html</code> file. If omitted or empty, writes to <code>stdout</code>.</li>
-<li>Multiple inputs (batch mode):<ul>
-<li>If <code>-o</code> is a <strong>directory</strong> (an existing directory, or a path ending in a separator such
-  as <code>out/</code>), each result is written there using the source basename with the extension
-  swapped (<code>foo.md</code> → <code>foo.html</code>). The directory is created if it does not exist.</li>
-<li>If <code>-o</code> is omitted, each result is written <strong>beside its source file</strong>.</li>
-<li>Passing a single output <strong>file</strong> with multiple inputs is an error (it would overwrite itself).</li>
-<li>Batch conversion continues past individual file errors and exits non-zero if any file failed.</li>
-</ul>
-</li>
-<li>A single input can also be sent to a directory the same way (e.g. <code>-o out/</code> writes <code>out/&lt;name&gt;.html</code>).</li>
-<li>
-<p>Example:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>//<span class="w"> </span>Read<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>foo.md<span class="w"> </span>file<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>bar.html
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html
-
-//<span class="w"> </span>Convert<span class="w"> </span>many<span class="w"> </span>files<span class="w"> </span>into<span class="w"> </span>an<span class="w"> </span>output<span class="w"> </span>directory
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>*.md<span class="w"> </span>-o<span class="w"> </span>build/
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-a-append"><code>-a/--append</code></h6>
-<ul>
-<li>Short format: <code>-a</code></li>
-<li>Alias: <code>--append</code></li>
-<li>Description: Append data to output instead of overwriting.</li>
-<li>
-<p>Example: </p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-a
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-u-encoding"><code>-u/--encoding</code></h6>
-<ul>
-<li>Short format: <code>-u</code></li>
-<li>Alias: <code>--encoding</code></li>
-<li>Description: Specify the input encoding.</li>
-<li>
-<p>Example: </p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-u<span class="w"> </span>UTF8
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-y-output-encoding"><code>-y/--output-encoding</code></h6>
-<ul>
-<li>Short format: <code>-y</code></li>
-<li>Alias: <code>--output-encoding</code></li>
-<li>Description: Specify the output encoding. Defaults to <code>utf8</code>.</li>
-<li>
-<p>Example:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-y<span class="w"> </span>latin1
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-e-extensions"><code>-e/--extensions</code></h6>
-<ul>
-<li>Short format: <code>-e</code></li>
-<li>Alias: <code>--extension</code></li>
-<li>Description: Load the specified extension(s). Should be valid path(s) to Node-compatible extensions.</li>
-<li>
-<p>Example:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-e<span class="w"> </span>~/twitter.js<span class="w"> </span>-e<span class="w"> </span>~/youtube.js
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-p-flavor"><code>-p/--flavor</code></h6>
-<ul>
-<li>Short format: <code>-p</code></li>
-<li>Alias: <code>--flavor</code></li>
-<li>Description: Run with a predetermined <a href="../available-options/">flavor</a> of options. Defaults to <code>vanilla</code>.</li>
-<li>Available flavors: <code>gfm</code>, <code>original</code>, <code>commonmark</code>, <code>vanilla</code> (<code>github</code> is a backwards-compatible
-  alias for <code>gfm</code>). Use <code>--list-flavors</code> to print the list at any time. An unrecognised flavor is
-  reported as an error listing the valid flavors.</li>
-<li>
-<p>Example:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-p<span class="w"> </span>github
-showdown<span class="w"> </span>makehtml<span class="w"> </span>--list-flavors
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-c-config"><code>-c/--config</code></h6>
-<ul>
-<li>Short format: <code>-c</code></li>
-<li>Alias: <code>--config</code></li>
-<li>Description: Enable or disable parser options.</li>
-<li>Introduced in: <code>2.0.1</code> (Breaking change. See the <a href="#extra-options"><code>Extra options</code></a> section below)</li>
-<li>Value handling:<ul>
-<li>A bare option name enables a boolean option: <code>-c strikethrough</code>.</li>
-<li>Booleans can also be set explicitly with <code>=true</code>/<code>=false</code>. Use <code>=false</code> to <strong>disable</strong> an
-  option that a flavor enables, e.g. <code>-p gfm -c tables=false</code>.</li>
-<li>Number options take a numeric value: <code>-c headerLevelStart=2</code>.</li>
-<li>String options take a string value: <code>-c ghMentionsLink=https://github.com/{u}</code>.</li>
-<li>Values are coerced to the option's declared type. Unknown option names and values that
-  do not match the option type are reported as warnings and ignored.</li>
-</ul>
-</li>
-<li>
-<p>Example: </p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-c<span class="w"> </span>strikethrough
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-c<span class="w"> </span>strikethrough<span class="w"> </span>-c<span class="w"> </span>emoji
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-c<span class="w"> </span><span class="nv">headerLevelStart</span><span class="o">=</span><span class="m">2</span>
-showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-p<span class="w"> </span>gfm<span class="w"> </span>-c<span class="w"> </span><span class="nv">tables</span><span class="o">=</span><span class="nb">false</span>
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h3 id="makemarkdown"><code>makemarkdown</code></h3>
-<p>Convert an HTML input into Markdown (the reverse of <code>makehtml</code>).</p>
-<p><strong>Usage</strong></p>
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makemarkdown<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div>
-<h4 id="options_1">Options</h4>
-<p><code>makemarkdown</code> accepts the same options as <a href="#makehtml"><code>makehtml</code></a>: <code>-i/--input</code>, <code>-o/--output</code>,
-<code>-a/--append</code>, <code>-u/--encoding</code>, <code>-y/--output-encoding</code>, <code>-e/--extensions</code>, <code>-p/--flavor</code> and
-<code>-c/--config</code>. Here the input is HTML and the output is Markdown.</p>
-<ul>
-<li>
-<p>Examples:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>//<span class="w"> </span>Read<span class="w"> </span>from<span class="w"> </span>stdin<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>stdout
-showdown<span class="w"> </span>makemarkdown<span class="w"> </span>-i
-
-//<span class="w"> </span>Convert<span class="w"> </span>foo.html<span class="w"> </span>into<span class="w"> </span>bar.md
-showdown<span class="w"> </span>makemarkdown<span class="w"> </span>-i<span class="w"> </span>foo.html<span class="w"> </span>-o<span class="w"> </span>bar.md
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h2 id="output-verbosity-and-color">Output verbosity and color</h2>
-<p>These are global flags — place them before the command (<code>showdown -v makehtml ...</code>) or after it,
-they apply to both <code>makehtml</code> and <code>makemarkdown</code>.</p>
-<h6 id="-q-quiet"><code>-q/--quiet</code></h6>
-<ul>
-<li>Description: Quiet mode. Suppresses informational messages; only errors (and the final <code>DONE!</code>) are printed.</li>
-</ul>
-<h6 id="-m-mute"><code>-m/--mute</code></h6>
-<ul>
-<li>Description: Mute mode. Suppresses <strong>everything</strong>, including error messages. The converted output is still produced.</li>
-</ul>
-<h6 id="-v-verbose"><code>-v/--verbose</code></h6>
-<ul>
-<li>Description: Verbose mode. Prints extra diagnostic information (resolved input files, per-file
-  <code>source -&gt; target</code> mappings in batch mode, input sizes and total time). Ignored when <code>-q</code>/<code>-m</code> is set.</li>
-<li>
-<p>Example:</p>
-<div class="admonition example">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-v<span class="w"> </span>-i<span class="w"> </span>*.md<span class="w"> </span>-o<span class="w"> </span>build/
-</code></pre></div>
-</div>
-</li>
-</ul>
-<h6 id="-color-no-color"><code>--color</code> / <code>--no-color</code></h6>
-<ul>
-<li>Description: Controls colorization of the status/diagnostic messages (the converted output itself
-  is never colored).</li>
-<li>Default: color is enabled automatically only when the message stream is a terminal (TTY). The
-  <code>NO_COLOR</code> and <code>FORCE_COLOR</code> environment variables are honored.</li>
-<li><code>--color</code> forces colored output even when the output is redirected; <code>--no-color</code> disables it.</li>
-</ul>
-<h2 id="extra-options">Extra options</h2>
-<p>Starting from the version <code>2.0.1</code>, CLI the format of passing extra options has changed. Please make the necessary changes to your code, if required.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">since <code>v2.0.1</code></label><label for="__tabbed_3_2">before <code>v2.0.1</code></label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>-c<span class="w"> </span>strikethrough<span class="w"> </span>-c<span class="w"> </span>emoji
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>showdown<span class="w"> </span>makehtml<span class="w"> </span>-i<span class="w"> </span>foo.md<span class="w"> </span>-o<span class="w"> </span>bar.html<span class="w"> </span>--strikethrough<span class="w"> </span>--emoji
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>You can specify any of the <a href="../available-options/">supported options</a>, and they will be passed to the converter.</p>
-<p>The above commands are equivalent of doing:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">conv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">showdown</span><span class="p">.</span><span class="nx">Converter</span><span class="p">({</span><span class="nx">strikethrough</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">emoji</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">});</span>
-</code></pre></div>
-<div class="admonition note">
-<p>The CLI runs with the <code>vanilla</code> flavor by default, which is the same set of defaults used by
-the node and browser builds. This means a few options, such as <code>ghCodeBlocks</code>, <code>ellipsis</code> and
-<code>encodeEmails</code>, are <strong>enabled</strong> out of the box. Use a different flavor with <code>-p</code> or override
-individual options with <code>-c &lt;option&gt;=true|false</code>.</p>
-</div>
+<h3 id="converterdispatchevent"><code>converter.dispatch(event)</code></h3>
+<p>Fire a <a href="../event-system/#event-object"><code>showdown.Event</code></a> through this converter's listener chain and return the (possibly modified) event. <em>(Advanced — primarily used internally by sub-parsers; most code should use <a href="#converterlistenname-callback"><code>listen()</code></a> or a <a href="../create-extension/#listener-extensions"><code>listener</code> extension</a> instead.)</em></p>
+<h3 id="convertergetmetadataraw"><code>converter.getMetadata([raw])</code></h3>
+<p>Return the <a href="../available-options/#metadata">metadata</a> of the last parsed document. With no argument (or a falsy one), returns the parsed metadata object; pass <code>true</code> to get the raw, unparsed string. Requires the <a href="../available-options/#metadata"><code>metadata</code></a> option.</p>
+<h3 id="convertergetmetadataformat"><code>converter.getMetadataFormat()</code></h3>
+<p>Return the format string of the last parsed document's metadata (e.g. the language tag declared on the opening metadata fence).</p>
+<h2 id="static-showdown-api">Static <code>showdown</code> API</h2>
+<p>These live on the global <code>showdown</code> object and affect global defaults or shared registries.</p>
+<h3 id="showdownsetoptionkey-value"><code>showdown.setOption(key, value)</code></h3>
+<p>Set a <strong>global</strong> option, inherited by every converter created afterwards. Returns <code>showdown</code> (chainable).</p>
+<h3 id="showdowngetoptionkey"><code>showdown.getOption(key)</code></h3>
+<p>Return the value of a global option.</p>
+<h3 id="showdowngetoptions"><code>showdown.getOptions()</code></h3>
+<p>Return the global options object.</p>
+<h3 id="showdownresetoptions"><code>showdown.resetOptions()</code></h3>
+<p>Reset all global options back to their default values.</p>
+<h3 id="showdownsetflavorname"><code>showdown.setFlavor(name)</code></h3>
+<p>Set the global <a href="../flavors/">flavor</a> applied to converters by default. Throws if the flavor is unknown.</p>
+<h3 id="showdowngetflavor"><code>showdown.getFlavor()</code></h3>
+<p>Return the name of the currently set global flavor.</p>
+<h3 id="showdowngetflavors"><code>showdown.getFlavors()</code></h3>
+<p>Return an array of the available <a href="../flavors/">flavor</a> names (e.g. <code>['commonmark', 'gfm', 'original', 'vanilla', 'github']</code>). <code>github</code> appears alongside <code>gfm</code> because it is a backwards-compatible alias for it.</p>
+<h3 id="showdowngetflavoroptionsname"><code>showdown.getFlavorOptions(name)</code></h3>
+<p>Return the option overrides bundled in a given flavor, or <code>undefined</code> if the flavor was not found. Useful for passing into a constructor: <code>new showdown.Converter(showdown.getFlavorOptions('commonmark'))</code>.</p>
+<h3 id="showdowngetdefaultoptionssimple"><code>showdown.getDefaultOptions([simple])</code></h3>
+<p>Return Showdown's default options. By default returns a flat <code>{ key: value }</code> map; pass <code>false</code> to get the full descriptor objects (with <code>describe</code>, <code>type</code>, <code>defaultValue</code>).</p>
+<h3 id="showdownextensionname-ext"><code>showdown.extension(name, [ext])</code></h3>
+<p>Register or retrieve an <a href="../extensions/">extension</a>. With two arguments it registers (and validates) <code>ext</code> under <code>name</code>; with one argument it returns the previously registered extension. Throws on an invalid extension or an unknown name.</p>
+<h3 id="showdowngetallextensions"><code>showdown.getAllExtensions()</code></h3>
+<p>Return all globally registered extensions as a <code>{ name: extension }</code> map.</p>
+<h3 id="showdownremoveextensionname"><code>showdown.removeExtension(name)</code></h3>
+<p>Unregister a globally registered extension by name.</p>
+<h3 id="showdownresetextensions"><code>showdown.resetExtensions()</code></h3>
+<p>Unregister all globally registered extensions.</p>
+<h3 id="showdownvalidateextensionext"><code>showdown.validateExtension(ext)</code></h3>
+<p>Return <code>true</code> if <code>ext</code> is a structurally valid extension, <code>false</code> otherwise. <em>(Advanced.)</em></p>
+<h3 id="showdownsubparsername-func"><code>showdown.subParser(name, [func])</code></h3>
+<p>Get or register a sub-parser. With two arguments it registers <code>func</code> under <code>name</code>; with one it returns the registered sub-parser (throws if not found). <em>(Advanced — used to override core conversion logic.)</em></p>
+<h3 id="showdowngetsubparserlist"><code>showdown.getSubParserList()</code></h3>
+<p>Return the map of all registered sub-parsers. <em>(Advanced.)</em></p>
 
 
 
